@@ -29,7 +29,7 @@ public class DataUserController {
         return dataUserService.findAll().stream().map(dataUser -> dataUserService.mapToDto(dataUser)).collect(Collectors.toList());
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{userId}")
     public Boolean delete(@PathVariable Integer userId){
         return dataUserService.delete(userId);
     }
